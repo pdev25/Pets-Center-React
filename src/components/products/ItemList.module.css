@@ -1,0 +1,24 @@
+.grid {
+  display: grid;
+  /* Columnas de hasta 250px, pero nunca menos de 2 por fila */
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 45%), 1fr));
+  gap: 50px 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  padding: 0 20px;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    gap: 30px 16px;
+  }
+}
+
+/* Celulares en vertical: un producto por fila */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

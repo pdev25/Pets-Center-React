@@ -1,0 +1,121 @@
+.contenedor {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 0 2rem;
+}
+
+.formulario {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding: 2.5rem 2rem;
+  background-color: var(--pets-soft, rgb(241, 241, 240));
+  border-radius: 30px;
+}
+
+.titulo {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-bold, sans-serif);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  text-align: center;
+  color: var(--pets-purple, rgb(99, 25, 164));
+}
+
+.fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+.grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.label {
+  font-family: var(--font-medium, sans-serif);
+  font-size: 0.95rem;
+  color: var(--pets-gray, rgb(100, 100, 100));
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-regular, sans-serif);
+  font-size: 1rem;
+  color: var(--pets-gray, rgb(100, 100, 100));
+  background-color: #fff;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--pets-purple, rgb(99, 25, 164));
+  box-shadow: 0 0 0 3px rgba(99, 25, 164, 0.15);
+}
+
+.error {
+  margin: 0;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  color: #b91c1c;
+  background-color: #fee2e2;
+  border-radius: 20px;
+}
+
+.boton {
+  margin-top: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  font-family: var(--font-medium, sans-serif);
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: var(--pets-orange, rgb(243, 170, 24));
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boton:hover:not(:disabled) {
+  background-color: var(--pets-purple, rgb(99, 25, 164));
+}
+
+.boton:disabled {
+  background-color: var(--pets-gray-light, rgb(171, 171, 171));
+  cursor: not-allowed;
+}
+
+.boton:focus-visible {
+  outline: 3px solid var(--pets-purple, rgb(99, 25, 164));
+  outline-offset: 3px;
+}
+
+.pie {
+  margin: 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--pets-gray, rgb(100, 100, 100));
+}
+
+.pie a {
+  font-family: var(--font-medium, sans-serif);
+  color: var(--pets-purple, rgb(99, 25, 164));
+}
+
+@media (max-width: 600px) {
+  .formulario {
+    padding: 2rem 1.25rem;
+  }
+
+  .fila {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,136 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-25px);
+}
+
+.imageLink {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.image {
+  width: 270px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.titleLink {
+  text-decoration: none;
+}
+
+.title {
+  font-family: var(--font-medium);
+  font-weight: 900;
+  font-size: 1.6em;
+  line-height: 1.3;
+  color: var(--pets-gray);
+  margin: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.price {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 25px;
+  color: var(--pets-orange);
+  margin-bottom: 1rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--pets-orange);
+  border-radius: 50px;
+  padding: 0.2rem 0.4rem;
+}
+
+.counterBtn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-medium);
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.counterBtn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.countText {
+  font-family: var(--font-bold);
+  font-size: 0.95rem;
+  color: #fff;
+  min-width: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.imageLink:focus-visible,
+.titleLink:focus-visible,
+.counterBtn:focus-visible {
+  outline: 3px solid var(--pets-purple);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none; }
+  .card:hover { transform: none; }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.15em;
+    margin: 8px;
+  }
+
+  .price {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.3em;
+  }
+
+  .price {
+    font-size: 1.5rem;
+  }
+}

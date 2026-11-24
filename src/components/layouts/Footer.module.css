@@ -1,0 +1,87 @@
+.footer {
+  margin-top: auto;
+  background-color: var(--pets-purple, rgb(99, 25, 164));
+  color: #fff;
+}
+
+.contenedor {
+  width: min(90%, 1100px);
+  margin: 0 auto;
+  padding: 4rem 0 3rem;
+}
+
+.logoFila {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 15px;
+}
+
+.logoFila a {
+  display: inline-block;
+  line-height: 0;
+}
+
+.logo {
+  display: block;
+  width: 100px;
+  height: auto;
+  /* Si la imagen tiene espacio transparente a la izquierda, compensalo con un valor negativo (ej: -8px) */
+  margin-left: 0;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 80px;
+  }
+}
+
+.columnas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.titulo {
+  margin: 0 0 1rem;
+  font-family: var(--font-regular, sans-serif);
+  font-size: 1.25em;
+  font-weight: 400;
+  color: #fff;
+}
+
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  display: block;
+  margin: 8px 0;
+  font-family: var(--font-regular, sans-serif);
+  font-size: 0.85em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--pets-orange, rgb(243, 170, 24));
+  text-decoration: underline;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--pets-orange, rgb(243, 170, 24));
+  outline-offset: 3px;
+}
+
+.copy {
+  background-color: var(--pets-orange, rgb(243, 170, 24));
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.copy p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #fff;
+}

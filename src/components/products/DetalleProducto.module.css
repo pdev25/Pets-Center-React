@@ -1,0 +1,153 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 20px 1rem;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-medium);
+  font-size: 0.95rem;
+  color: var(--pets-purple);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: background-color 0.2s;
+}
+
+.backLink:hover {
+  background-color: var(--pets-soft);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--pets-soft);
+  border-radius: 20px;
+  padding: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Por si algún estilo global centra los títulos o párrafos */
+.infoSection > :not(button) {
+  text-align: left;
+}
+
+.categoryTag {
+  align-self: flex-start;
+  font-family: var(--font-medium);
+  font-size: 0.85rem;
+  color: #fff;
+  background-color: var(--pets-purple);
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.title {
+  font-family: var(--font-extrabold);
+  font-weight: 900;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  line-height: 1.15;
+  color: var(--pets-gray);
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--pets-orange);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--pets-orange);
+}
+
+.descriptionTitle {
+  font-family: var(--font-bold);
+  font-size: 1.1rem;
+  color: var(--pets-purple);
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--pets-gray);
+  margin-bottom: 2rem;
+}
+
+.buyButton {
+  align-self: flex-start;
+  text-align: center;
+  width: 250px;
+  max-width: 100%;
+  padding: 0.8rem 1.25rem;
+  font-family: var(--font-medium);
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: var(--pets-orange);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.buyButton:hover {
+  background-color: var(--pets-purple);
+}
+
+.buyButton:focus-visible,
+.backLink:focus-visible {
+  outline: 3px solid var(--pets-purple);
+  outline-offset: 3px;
+}
+
+.statusContainer {
+  font-family: var(--font-medium);
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 5rem 1rem;
+  color: var(--pets-gray-light);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .imageWrapper {
+    padding: 1.5rem;
+  }
+
+  .buyButton {
+    width: 100%;
+  }
+}

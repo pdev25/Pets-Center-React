@@ -1,0 +1,36 @@
+/* Montserrat para toda la tienda.
+   Requiere: npm install @fontsource/montserrat
+   Copiar este archivo a src/ e importarlo en main.jsx: import './fonts.css';
+   Los nombres de familia son los mismos que usa style.css y las variables de pets-tokens.css. */
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../node_modules/@fontsource/montserrat/files/montserrat-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../node_modules/@fontsource/montserrat/files/montserrat-latin-500-normal.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../node_modules/@fontsource/montserrat/files/montserrat-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-ExtraBold";
+  src: url("../node_modules/@fontsource/montserrat/files/montserrat-latin-800-normal.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}

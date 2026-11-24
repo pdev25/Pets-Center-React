@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.container h1 {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--pets-purple);
+  max-width: 1200px;
+  margin: 0 auto 1rem;
+  padding: 0 20px;
+}
+
+.statusMessage {
+  font-family: var(--font-medium);
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--pets-gray-light);
+}

@@ -1,0 +1,194 @@
+/* El carrusel usa 100vw, que incluye el ancho de la barra de scroll vertical.
+   Con esto se evita que aparezca una barra de scroll horizontal en toda la app. */
+:global(html),
+:global(body) {
+  overflow-x: clip;
+}
+
+@supports not (overflow: clip) {
+  :global(html),
+  :global(body) {
+    overflow-x: hidden;
+  }
+}
+
+/* Ocupa todo el ancho de la pantalla, aunque el Layout tenga un contenedor con max-width */
+.carrusel {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  /* Compensa el padding superior de .content en el Layout (3.5rem) */
+  margin-top: -3.5rem;
+  /* Alto responsive: se adapta al ancho, con piso en celulares y tope del 80% de la pantalla */
+  height: clamp(340px, 50vw, 80vh);
+}
+
+@media (max-width: 768px) {
+  .carrusel {
+    margin-top: -2rem; /* padding superior de .content en mobile */
+  }
+}
+
+.pista {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+/* La imagen llena el espacio sin deformarse (se recorta si hace falta) */
+.imagen {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  width: min(84%, 620px);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.caption h2 {
+  margin: 0;
+  color: rgb(243, 170, 24);
+  font-family: var(--font-extrabold);
+  font-size: clamp(1.7rem, 4.5vw, 6rem);
+  font-weight: 900;
+  line-height: 1.1;
+  white-space: pre-line;
+}
+
+.caption p {
+  margin: 10px 0 0;
+  color: #fff;
+  font-family: var(--font-extrabold);
+  font-size: clamp(0.9rem, 2.2vw, 2.5rem);
+  font-weight: 900;
+  line-height: 1.2;
+  white-space: pre-line;
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 1rem;
+  width: clamp(160px, 18vw, 250px);
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--font-medium);
+  font-size: clamp(1rem, 1.6vw, 1.75rem);
+  color: #fff;
+  background-color: rgb(243, 170, 24);
+  border-radius: 50px;
+  transition: background-color 0.2s;
+}
+
+.boton:hover {
+  background-color: rgb(99, 25, 164);
+}
+
+.control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  line-height: 1;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.35);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.control:hover {
+  background-color: rgba(99, 25, 164, 0.85);
+}
+
+.prev { left: 16px; }
+.next { right: 16px; }
+
+.indicadores {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.indicador,
+.indicadorActivo {
+  width: 30px;
+  height: 4px;
+  padding: 0;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.indicador {
+  opacity: 0.5;
+}
+
+.indicadorActivo {
+  opacity: 1;
+}
+
+.control:focus-visible,
+.indicador:focus-visible,
+.indicadorActivo:focus-visible,
+.boton:focus-visible {
+  outline: 3px solid rgb(243, 170, 24);
+  outline-offset: 3px;
+}
+
+/* Celulares: sin flechas (se desliza con el dedo) y texto legible sobre la imagen */
+@media (max-width: 767px) {
+  .control {
+    display: none;
+  }
+
+  .slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1));
+    pointer-events: none;
+  }
+
+  .caption {
+    z-index: 1;
+  }
+
+  .indicador,
+  .indicadorActivo {
+    width: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pista {
+    transition: none;
+  }
+}

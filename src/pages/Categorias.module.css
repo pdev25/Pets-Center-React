@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.titulo {
+  font-family: var(--font-bold, sans-serif);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--pets-purple, rgb(99, 25, 164));
+  text-transform: capitalize;
+  max-width: 1200px;
+  margin: 0 auto 1rem;
+  padding: 0 20px;
+}
+
+.statusMessage {
+  font-family: var(--font-medium, sans-serif);
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--pets-gray-light, rgb(171, 171, 171));
+}

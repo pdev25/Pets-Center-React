@@ -1,0 +1,116 @@
+/* Este componente se muestra dentro de la pestaña "Cupones" del Panel */
+.container {
+  width: 100%;
+  padding: 0;
+}
+
+.header {
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-family: var(--font-medium, sans-serif);
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--pets-purple, rgb(99, 25, 164));
+}
+
+.subtitle {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: var(--pets-gray-light, rgb(171, 171, 171));
+}
+
+.sectionTitle {
+  margin: 0;
+  font-family: var(--font-medium, sans-serif);
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: var(--pets-gray, rgb(100, 100, 100));
+}
+
+.statusText,
+.emptyText {
+  padding: 3rem 0;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--pets-gray-light, rgb(171, 171, 171));
+}
+
+/* Mensaje de error */
+.errorMessage {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #b91c1c;
+  background-color: #fee2e2;
+  border-radius: 20px;
+}
+
+/* Lista de cupones */
+.listSection {
+  margin-top: 1rem;
+}
+
+.listHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.badge {
+  padding: 0.15rem 0.7rem;
+  font-family: var(--font-bold, sans-serif);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--pets-purple, rgb(99, 25, 164));
+  border-radius: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+/* Cada cupón con borde punteado, como un ticket */
+.card {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--pets-soft, rgb(241, 241, 240));
+  border: 2px dashed var(--pets-purple, rgb(99, 25, 164));
+  border-radius: 20px;
+}
+
+.cardContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+.code {
+  font-family: var(--font-bold, sans-serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  color: var(--pets-purple, rgb(99, 25, 164));
+  overflow-wrap: anywhere;
+}
+
+.discount {
+  flex-shrink: 0;
+  padding: 0.3rem 0.8rem;
+  font-family: var(--font-bold, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--pets-orange, rgb(243, 170, 24));
+  border-radius: 50px;
+}
