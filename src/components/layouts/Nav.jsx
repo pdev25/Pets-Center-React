@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
 import styles from "./Nav.module.css";
 
-// El "to" tiene que coincidir con el valor de "categoria" guardado en Firestore
-const categorias = [
+// Links del menú. En las categorías, el "to" tiene que coincidir con el valor de "categoria" guardado en Firestore
+const enlaces = [
   { texto: "Perros", to: "/perros" },
   { texto: "Gatos", to: "/gatos" },
+  { texto: "Contacto", to: "/contacto" },
 ];
 
 const Nav = () => {
   return (
-    <nav className={styles.navContainer} aria-label="Categorías">
+    <nav className={styles.navContainer} aria-label="Navegación principal">
       <ul className={styles.navList}>
-        {categorias.map((categoria) => (
-          <li key={categoria.to}>
-            <Link to={categoria.to} className={styles.navLink}>
-              {categoria.texto}
+        {enlaces.map((enlace) => (
+          <li key={enlace.to}>
+            <Link to={enlace.to} className={styles.navLink}>
+              {enlace.texto}
             </Link>
           </li>
         ))}

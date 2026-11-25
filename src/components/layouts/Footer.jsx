@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/PetsCenter.png";
 import styles from "./Footer.module.css";
 
-// Editá acá las columnas y los links. Con "to" navega dentro de la app; con "href" va a un ancla o URL.
 const columnas = [
   {
     titulo: "Tienda Online",
@@ -35,6 +34,8 @@ const columnas = [
     enlaces: [
       { texto: "Acerca de Nosotros", href: "#acerca" },
       { texto: "Política de Privacidad", href: "#privacidad" },
+      { texto: "Contacto", to: "/contacto" },
+
     ],
   },
 ];

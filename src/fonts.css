@@ -1,7 +1,3 @@
-/* Montserrat para toda la tienda.
-   Requiere: npm install @fontsource/montserrat
-   Copiar este archivo a src/ e importarlo en main.jsx: import './fonts.css';
-   Los nombres de familia son los mismos que usa style.css y las variables de pets-tokens.css. */
 
 @font-face {
   font-family: "Montserrat-Regular";

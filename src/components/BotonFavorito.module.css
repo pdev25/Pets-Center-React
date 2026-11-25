@@ -14,7 +14,7 @@
   transition: all 0.2s ease;
 }
 
-/* este estilo lo toma cuando el esfavorito esta en true  */
+/* lo toma cuando esta en true  */
 .activo .icono {
   fill: #e74c3c;
   stroke: #e74c3c;

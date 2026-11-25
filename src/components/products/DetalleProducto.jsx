@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useCarrito } from '../../context/CarritoContext';
 import { db } from '../../firebase/config';
 import { doc, getDoc } from 'firebase/firestore';
-import Opiniones from './Opiniones'; // Importamos el componente de opiniones
+import Opiniones from './Opiniones';
 import styles from './DetalleProducto.module.css';
 
 const DetalleProducto = () => {

@@ -1,6 +1,5 @@
 import styles from "./Marcas.module.css";
 
-// Los logos van en la carpeta public/img/
 const marcas = [
   { nombre: "Dog Chow", imagen: "/src/assets/dog_chow.webp" },
   { nombre: "Eukanuba", imagen: "/src/assets/eukanuba.png" },

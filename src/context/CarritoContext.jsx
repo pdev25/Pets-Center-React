@@ -31,12 +31,12 @@ export const CarritoProvider = ({ children }) => {
     }
   };
 
-  // Eliminamos el producto
+  // Eliminar producto
   const eliminarDelCarrito = (id) => {
     setCarrito(carritoPrevio => carritoPrevio.filter(item => item.id !== id));
   };
 
-  // Incrementar cantidad en 1
+  // Incrementar en 1
   const incrementarCantidad = (id) => {
     setCarrito(carritoPrevio =>
       carritoPrevio.map(item =>
@@ -45,7 +45,7 @@ export const CarritoProvider = ({ children }) => {
     );
   };
 
-  // Decrementar cantidad en 1 (Si llega a 0, se elimina)
+  // Decrementar en 1 (Si llega a 0, se elimina)
   const decrementarCantidad = (id) => {
     setCarrito(carritoPrevio =>
       carritoPrevio

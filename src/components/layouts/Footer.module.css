@@ -24,7 +24,6 @@
   display: block;
   width: 100px;
   height: auto;
-  /* Si la imagen tiene espacio transparente a la izquierda, compensalo con un valor negativo (ej: -8px) */
   margin-left: 0;
 }
 

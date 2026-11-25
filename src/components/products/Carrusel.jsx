@@ -2,7 +2,6 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Carrusel.module.css";
 
-// Las imágenes van en la carpeta public/img/
 const slides = [
   {
     imagen: "https://i.ibb.co/whNVwyC3/banner-2.png",

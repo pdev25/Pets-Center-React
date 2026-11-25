@@ -2,25 +2,24 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Carrusel.module.css";
 
-// Las imágenes van en la carpeta public/img/
 const slides = [
   {
-    imagen: "https://i.ibb.co/whNVwyC3/banner-2.png",
-    alt: "Alimento balanceado con ingredientes naturales",
-    titulo: "100% CON\nINGREDIENTES\nNATURALES",
-    texto: "LA MISMA CALIDAD\nDE SIEMPRE",
+    imagen: "https://i.ibb.co/kVMthYWC/banner-1.jpg",
+    alt: "Alimento balanceado con nutrientes para perros y gatos",
+    titulo: "MASCOTAS ÚNICAS\n",
+    texto: "COMO SUS NECESIDADES NUTRICIONALES",
   },
   {
-    imagen: "https://i.ibb.co/whNVwyC3/banner-2.png",
+    imagen: "https://i.ibb.co/KzcgkNV2/banner-2.jpg",
     alt: "Alimento con textura y sabor irresistibles",
     titulo: "TEXTURA\nY SABOR\nIRRESISTIBLES",
-    texto: "PARA UNA NUTRICIÓN\nCOMPLETA DIARIA",
+    texto: "PALATABILIDAD MÁXIMA PARA TU MASCOTA\n",
   },
   {
-    imagen: "https://i.ibb.co/gFXGnwrV/banner-3.jpg",
+    imagen: "https://i.ibb.co/Q7VLMvFz/banner-3.jpg",
     alt: "Alimento balanceado con ingredientes naturales",
-    titulo: "100% CON\nINGREDIENTES\nNATURALES",
-    texto: "LA MISMA CALIDAD\nDE SIEMPRE",
+    titulo: "MASCOTA SANA Y FELIZ\n",
+    texto: "LA MEJOR NUTRICIÓN\nEN PETS CENTER",
   },
 ];
 

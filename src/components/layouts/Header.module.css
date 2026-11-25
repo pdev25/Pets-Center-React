@@ -40,7 +40,6 @@
   align-items: center;
 }
 
-/* Los links del componente Nav se ven blancos sobre el violeta */
 .centerSection a {
   color: #fff;
   text-decoration: none;

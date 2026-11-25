@@ -11,6 +11,7 @@ import Panel from "./pages/Panel";
 import './App.css';
 import Carrusel from "./components/layouts/Carrusel";
 import Marcas from "./components/layouts/Marcas";
+import Contacto from "./pages/Contacto";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route element={<Layout />}>
           <Route path="/" element={<><Carrusel /><ItemListContainer /><Marcas /></>} />
           <Route path="/productos" element={<ItemListContainer />} />
+          <Route path="/contacto" element={<Contacto />} />
           <Route path="/producto/:id" element={<DetalleProducto />} />
           <Route path="/:idCategoria" element={<Categorias />} />
           <Route path="/carrito" element={<Carrito />} />
