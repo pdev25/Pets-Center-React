@@ -1,8 +1,8 @@
 import styles from "./Marcas.module.css";
 
 const marcas = [
-  { nombre: "Dog Chow", imagen: "/src/assets/dog_chow.webp" },
-  { nombre: "Eukanuba", imagen: "/src/assets/eukanuba.png" },
+  { nombre: "Dog Chow", imagen: "https://i.ibb.co/GQTKQVkV/dog-chow.webp" },
+  { nombre: "Eukanuba", imagen: "https://i.ibb.co/nNTZwHLY/eukanuba.png" },
   { nombre: "Excellent", imagen: "/src/assets/excellent.webp" },
   { nombre: "Fancy Feast", imagen: "/src/assets/fancy_feast.png" },
   { nombre: "Iams", imagen: "/src/assets/iams.png" },
