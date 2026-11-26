@@ -16,7 +16,7 @@ const slides = [
     texto: "PALATABILIDAD MÁXIMA PARA TU MASCOTA\n",
   },
   {
-    imagen: "https://i.ibb.co/Q7VLMvFz/banner-3.jpg",
+    imagen: "https://i.ibb.co/WpqD787T/banner-3.jpg",
     alt: "Alimento balanceado con ingredientes naturales",
     titulo: "MASCOTA SANA Y FELIZ\n",
     texto: "LA MEJOR NUTRICIÓN\nEN PETS CENTER",

@@ -12,10 +12,10 @@ const marcas = [
   { nombre: "Pedigree", imagen: "https://i.ibb.co/S79wDWTB/pedigree.webp" },
   { nombre: "Cat Chow", imagen: "https://i.ibb.co/JR5Nqwdx/purina.jpg" },
   { nombre: "Purina", imagen: "https://i.ibb.co/Q7t5tqgb/purina-cat-chow.webp" },
-  { nombre: "Royal Canin", imagen: "https://i.ibb.co/6cQ81DM9/royal-canin.jpg" },
+  { nombre: "Royal Canin", imagen: "https://i.ibb.co/bg7wLnDh/royal-canin.png" },
   { nombre: "Sieger", imagen: "https://i.ibb.co/21Fzcv2G/sieger.webp" },
   { nombre: "Unik", imagen: "https://i.ibb.co/k2fzxKsc/unik.png" },
-  { nombre: "Vitalcan", imagen: "https://i.ibb.co/tTqTD08B/vitalcan.jpg" },
+  { nombre: "Vitalcan", imagen: "https://i.ibb.co/TDZfHpms/vitalcan.png" },
   { nombre: "Whiskas", imagen: "https://i.ibb.co/d4wrmzVL/whiskas.webp" },
 ];
 
