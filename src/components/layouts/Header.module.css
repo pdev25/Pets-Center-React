@@ -11,10 +11,12 @@
   padding: 10px 1.5rem;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
+/* ---------- Logo ---------- */
 .logo {
+  order: 1;
   display: block;
   flex-shrink: 0;
   padding: 5px;
@@ -26,20 +28,21 @@
   height: auto;
 }
 
-/* Menú: navegación + sesión */
+/* ---------- Menú ----------
+   En pantallas anchas el contenedor del menú "se disuelve": la navegación y la
+   sesión pasan a ser elementos directos de la fila del header, sin superponerse. */
 .menu {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+  display: contents;
 }
 
 .centerSection {
+  order: 2;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
+/* Los links del componente Nav se ven blancos sobre el violeta */
 .centerSection a {
   color: #fff;
   text-decoration: none;
@@ -51,62 +54,15 @@
   color: var(--pets-orange, rgb(243, 170, 24));
 }
 
-.authSection {
-  margin-left: auto;
-}
-
-.authLista {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.authTexto {
-  max-width: 200px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 0.9rem;
-  color: #fff;
-}
-
-.authLink {
-  font-family: var(--font-regular, sans-serif);
-  font-size: 1.05em;
-  color: #fff;
-  text-decoration: none;
-}
-
-.authLink:hover {
-  color: var(--pets-orange, rgb(243, 170, 24));
-}
-
-.botonSesion {
-  padding: 6px 16px;
-  font-family: var(--font-medium, sans-serif);
-  font-size: 0.9rem;
-  color: #fff;
-  background-color: var(--pets-orange, rgb(243, 170, 24));
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-}
-
-.botonSesion:hover {
-  filter: brightness(0.9);
-}
-
-/* Contenedor del buscador */
+/* ---------- Buscador: es lo único que se achica cuando falta lugar ---------- */
 .searchForm {
+  order: 3;
   position: relative;
   display: flex;
   align-items: center;
-  /* Ancho ideal de 260px: puede achicarse, pero nunca desaparece */
-  flex: 0 1 260px;
-  min-width: 150px;
+  flex: 1 1 260px;
+  min-width: 120px;
+  max-width: 300px;
 }
 
 .searchInput {
@@ -149,29 +105,134 @@
   color: #111;
 }
 
-/* Carrito con contador naranja */
-.carrito {
-  display: inline-flex;
+/* ---------- Sesión ---------- */
+.authSection {
+  order: 4;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.authLista {
+  display: flex;
   align-items: center;
-  gap: 4px;
-  font-size: 1.4rem;
-  text-decoration: none;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.authTexto {
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.9rem;
   color: #fff;
 }
 
-.contador {
-  min-width: 1.6em;
-  padding: 2px 6px;
-  font-family: var(--font-bold, sans-serif);
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-align: center;
+.authLink {
+  font-family: var(--font-regular, sans-serif);
+  font-size: 1.05em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.authLink:hover {
+  color: var(--pets-orange, rgb(243, 170, 24));
+}
+
+.botonSesion {
+  padding: 6px 16px;
+  font-family: var(--font-medium, sans-serif);
+  font-size: 0.9rem;
   color: #fff;
   background-color: var(--pets-orange, rgb(243, 170, 24));
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.botonSesion:hover {
+  filter: brightness(0.9);
+}
+
+/* ---------- Redes sociales ---------- */
+.redes {
+  order: 5;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.redLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  color: #fff;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.redLink:hover {
+  background-color: var(--pets-orange, rgb(243, 170, 24));
+}
+
+.redLink svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ---------- Carrito (mismo estilo que las redes) ---------- */
+.carrito {
+  order: 6;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.carrito:hover {
+  background-color: var(--pets-orange, rgb(243, 170, 24));
+}
+
+.carrito svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Contador sobre la esquina del ícono */
+.contador {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  min-width: 1.35rem;
+  height: 1.35rem;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: var(--font-bold, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  background-color: var(--pets-orange, rgb(243, 170, 24));
+  border: 2px solid var(--pets-purple, rgb(99, 25, 164));
   border-radius: 50px;
 }
 
-/* Hamburguesa (solo celulares) */
+/* ---------- Hamburguesa (solo pantallas chicas) ---------- */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -211,34 +272,49 @@
 .hamburger:focus-visible,
 .authLink:focus-visible,
 .botonSesion:focus-visible,
+.redLink:focus-visible,
 .centerSection a:focus-visible {
   outline: 3px solid var(--pets-orange, rgb(243, 170, 24));
   outline-offset: 3px;
 }
 
-@media (max-width: 1024px) {
+/* ---------- Pantallas chicas y medianas ---------- */
+@media (max-width: 1200px) {
   .headerContainer {
     display: grid;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 1fr auto auto auto;
     grid-template-areas:
-      "logo carrito burger"
-      "search search search"
-      "menu menu menu";
+      "logo redes carrito burger"
+      "search search search search"
+      "menu menu menu menu";
     align-items: center;
-    gap: 8px 20px;
+    gap: 8px 12px;
     padding: 8px 20px 10px;
   }
 
   .logo { grid-area: logo; justify-self: start; }
-  .carrito { grid-area: carrito; }
-  .hamburger { grid-area: burger; display: flex; }
-  .searchForm { grid-area: search; width: 100%; min-width: 0; }
+  .logoImg { width: 80px; }
 
+  /* Las redes quedan siempre visibles, en la primera fila */
+  .redes { grid-area: redes; gap: 2px; }
+  .redLink { width: 34px; height: 34px; }
+
+  .carrito { grid-area: carrito; width: 34px; height: 34px; }
+  .hamburger { grid-area: burger; display: flex; }
+
+  .searchForm {
+    grid-area: search;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  /* Menú desplegable con la navegación y la sesión */
   .menu {
     grid-area: menu;
+    display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 0;
     background-color: var(--pets-purple-dark, rgb(85, 20, 143));
     border-radius: 12px;
     max-height: 0;
@@ -257,7 +333,7 @@
     padding: 10px 0;
   }
 
-  /* Si Nav usa una lista, queda en columna dentro del menú desplegable */
+  /* La navegación queda en columna dentro del menú desplegable */
   .centerSection ul {
     flex-direction: column;
     align-items: center;

@@ -18,13 +18,15 @@
   overflow: hidden;
   width: 100vw;
   margin-left: calc(50% - 50vw);
+  /* Compensa el padding superior de .content en el Layout (3.5rem) */
   margin-top: -3.5rem;
+  /* Alto responsive: se adapta al ancho, con piso en celulares y tope del 80% de la pantalla */
   height: clamp(340px, 50vw, 80vh);
 }
 
 @media (max-width: 768px) {
   .carrusel {
-    margin-top: -2rem;
+    margin-top: -2rem; /* padding superior de .content en mobile */
   }
 }
 
@@ -40,6 +42,7 @@
   height: 100%;
 }
 
+/* La imagen llena el espacio sin deformarse (se recorta si hace falta) */
 .imagen {
   display: block;
   width: 100%;
@@ -189,3 +192,28 @@
     transition: none;
   }
 }
+
+/* Tipografía del banner en celulares: se achica de forma continua con el ancho */
+@media (max-width: 767px) {
+  .caption {
+    left: 6%;
+    width: 88%;
+  }
+
+  .caption h2 {
+    font-size: clamp(1.2rem, 6.2vw, 2rem);
+  }
+
+  .caption p {
+    margin-top: 6px;
+    font-size: clamp(0.7rem, 2.8vw, 1rem);
+  }
+
+  .boton {
+    width: clamp(120px, 34vw, 170px);
+    margin-top: 0.6rem;
+    padding: 7px;
+    font-size: clamp(0.8rem, 3.2vw, 1rem);
+  }
+}
+

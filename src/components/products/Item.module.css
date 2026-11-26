@@ -45,7 +45,7 @@
 .price {
   font-family: var(--font-bold);
   font-weight: 700;
-  font-size: 25px;
+  font-size: 22px;
   color: var(--pets-orange);
   margin-bottom: 1rem;
 }
