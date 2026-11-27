@@ -15,10 +15,10 @@
   }
 }
 
-/* Celulares en vertical: un producto por fila */
-@media (max-width: 480px) {
+/* Menos de 390px: 2 productos por fila, con un poco menos de separación */
+@media (max-width: 389px) {
   .grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 12px;
   }
 }

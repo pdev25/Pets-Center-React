@@ -45,7 +45,7 @@
 .price {
   font-family: var(--font-bold);
   font-weight: 700;
-  font-size: 22px;
+  font-size: 25px;
   color: var(--pets-orange);
   margin-bottom: 1rem;
 }
@@ -125,12 +125,25 @@
   }
 }
 
-@media (max-width: 480px) {
+/* Menos de 390px: 2 productos por fila, tarjetas más compactas */
+@media (max-width: 389px) {
   .title {
-    font-size: 1.3em;
-  }z
+    font-size: 1.05em;
+    margin: 6px 4px;
+  }
 
   .price {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .counterBtn {
+    width: 24px;
+    height: 24px;
   }
 }

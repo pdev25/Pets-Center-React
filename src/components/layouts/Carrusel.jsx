@@ -6,19 +6,19 @@ const slides = [
   {
     imagen: "https://i.ibb.co/kVMthYWC/banner-1.jpg",
     alt: "Alimento balanceado con nutrientes para perros y gatos",
-    titulo: "MASCOTAS ÚNICAS\n",
-    texto: "COMO SUS NECESIDADES NUTRICIONALES",
+    titulo: "MASCOTAS\nÚNICAS\n",
+    texto: "COMO SUS NECESIDADES\nNUTRICIONALES",
   },
   {
     imagen: "https://i.ibb.co/KzcgkNV2/banner-2.jpg",
     alt: "Alimento con textura y sabor irresistibles",
-    titulo: "TEXTURA\nY SABOR\nIRRESISTIBLES",
-    texto: "PALATABILIDAD MÁXIMA PARA TU MASCOTA\n",
+    titulo: "TEXTURA Y SABOR\nIRRESISTIBLES",
+    texto: "PALATABILIDAD MÁXIMA\nPARA TU MASCOTA\n",
   },
   {
     imagen: "https://i.ibb.co/WpqD787T/banner-3.jpg",
     alt: "Alimento balanceado con ingredientes naturales",
-    titulo: "MASCOTA SANA Y FELIZ\n",
+    titulo: "MASCOTA\nSANA Y FELIZ",
     texto: "LA MEJOR NUTRICIÓN\nEN PETS CENTER",
   },
 ];
@@ -38,9 +38,7 @@ const Carrusel = () => {
     () => setActual((i) => (i - 1 + slides.length) % slides.length),
     []
   );
-
-  // Avanza solo cada 5 segundos. Se frena con el mouse/foco encima
-  // y no arranca si la persona tiene activado "reducir movimiento".
+  
   useEffect(() => {
     const reducirMovimiento = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
@@ -113,7 +111,17 @@ const Carrusel = () => {
         onClick={anterior}
         aria-label="Banner anterior"
       >
-        ‹
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
       </button>
       <button
         type="button"
@@ -121,7 +129,17 @@ const Carrusel = () => {
         onClick={siguiente}
         aria-label="Banner siguiente"
       >
-        ›
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M9 18l6-6-6-6" />
+        </svg>
       </button>
 
       <div className={styles.indicadores}>
