@@ -12,21 +12,15 @@ Proyecto diseñado y desarrollado para el centro de distribución de alimentos p
 
 Algunas capturas del sitio
 
+![HOME] https://i.ibb.co/8DRn2KBw/cap1.png
 
+![PRODUCTOS] https://i.ibb.co/XxsrZ9md/cap2.png
 
-![PANTALLA PRINCIPAL] https://i.ibb.co/8DRn2KBw/cap1.png
+![DETALLE PRODUCTOS] https://i.ibb.co/qLYpzmby/cap3.png
 
-![PANTALLA PRINCIPAL] https://i.ibb.co/XxsrZ9md/cap2.png
+![PANEL DE ADMINISTRACIÓN] https://i.ibb.co/sprNpfj4/cap4.png
 
-![PANTALLA PRINCIPAL] https://i.ibb.co/qLYpzmby/cap3.png
-
-![PANTALLA PRINCIPAL] https://i.ibb.co/sprNpfj4/cap4.png
-
-![PANTALLA PRINCIPAL] https://i.ibb.co/ccq7H6FR/cap5.png
-
-
-
-
+![CARRITO] https://i.ibb.co/ccq7H6FR/cap5.png
 
 ### :pencil: Características Principales
 
