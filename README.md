@@ -6,22 +6,30 @@
 
 ## :page_facing_up: Descripción
 
-Proyecto diseñado y desarrollado para el centro de distribución de alimentos para mascotas **Pets Center**. El sitio es minimalista, intuitivo y fácil de usar con el objetivo de darle comodidad, rapidéz y facilidad al usuario para hacer sus compras y ponerse en contacto con el proveedor.
+Proyecto diseñado y desarrollado para el centro de distribución de alimentos para mascotas **Pets Center**. El sitio es minimalista, intuitivo y fácil de usar con el objetivo de darle comodidad, rapidéz y facilidad al Usuario, implementado en REACT con un CRUD, para el manejo de carga de productos, lectura, actualización, eliminación.
 
 ### :iphone: Capturas
 
 Algunas capturas del sitio
 
-![captura1.png](/home/pato/Escritorio/captura1.png)
+![cap1.png](/home/pato/Escritorio/img/cap1.png)
 
-![captura2.png](/home/pato/Escritorio/captura2.png)
+![cap2.png](/home/pato/Escritorio/img/cap2.png)
 
-![captura3.png](/home/pato/Escritorio/captura3.png)
+![cap3.png](/home/pato/Escritorio/img/cap3.png)
+
+![cap4.png](/home/pato/Escritorio/img/cap4.png)
+
+![cap5.png](/home/pato/Escritorio/img/cap5.png)
 
 ### :pencil: Características Principales
 
-* **Carrito totalmente funcional:** Los usuarios pueden seleccionar la cantidad de productos que neceitan, eliminar, vacias y gestionar sus compras.
+* ***CRUD:*** carga de productos, lectura, eliminación y actualización
+
+* **Carrito totalmente funcional:** Los usuarios pueden seleccionar la cantidad de productos que necesitan, eliminar, vaciar y gestionar sus compras.
+
 * **Diseño minimalista:** Contemplado para cualquier tipo de usuario de manera intuitiva y fácil de navegar y comprar, responsivo en cualquier dispositivo.
+
 * **Navegación:** intuitiva, experiencia de usuario cómoda fácil de usar, sencillo, accesible y claro.
 
 ---
@@ -30,9 +38,9 @@ Algunas capturas del sitio
 
 Tecnologías:
 
-* **HTML5** - Estructuración del contenido y el marcado semántico.
+* **JSX** - componentes.
 * **CSS3** - Diseño visual (interface gráfica), Flexbox y Media Queries.
-* **JavaScript** - Lógica e interacción para funcionamiento del carrito, menú hamburguesa y Localstorage.
+* **REACT, JavaScript** - componentes, hooks: useState, useEffects, pops, estados globales, children, React Router, formularios, json, context, login, firebase, lógica e inteface gráfica, etc, etc, etc.
 * **Git & GitHub** - Para el control de versiones y el alojamiento del código fuente.
 
 ---
@@ -45,6 +53,7 @@ Antes de comenzar, se debe  contar con las siguientes herramientas instaladas:
 * **Editor de código:** [Visual Studio Code](https://code.visualstudio.com/).
 * **Extensión de VS Code:** [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) (necesaria para desplegar y previsualizar el proyecto localmente en tiempo real).
 * **Prettier**: Formatedor de código (se descarga desde las extensiones de VSCode)
+* **Node JS + Vite + paquetes npm**
 
 ---
 
@@ -55,16 +64,16 @@ Para clonar el proyecto y ejecutarlo en tu entorno local:
 1. **Clonar el repositorio:** Abre tu terminal (Git Bash) y ejecuta el siguiente comando:
    
    ```bash
-   https://github.com/pdev25/PetsCenter.git
+   https://github.com/pdev25/Pets-Center-React.git
    ```
 
-**Abrir el proyecto:** Abrí la carpeta del proyecto clonado utilizando VSC.
+2. **Netlify**
+   
+   ```bash
+   https://pets-center-react.netlify.app/
+   ```
 
-**Desplegar el servidor local:** Localiza el archivo index.html en el explorador de archivos de VSC.
-
-Click derecho sobre y seleccionar "Open with Live Server" ó doble click para que el navegador abra el sitio.
+**Abrir el proyecto:** git clone + URL del proyecto, instalar las dependencias en la carpeta clonada con npm install y correr el servidor local con npm run dev.
 
 **Autor**
 Patricio Córdoba
-# Pets-Center-React
-# Pets-Center-React
